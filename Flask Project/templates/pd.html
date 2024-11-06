@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinsons Disese Prediction</title>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     
+</head>
+<body>
+    <div class="body">
+        <div class="card w-75">
+            <div class="card-body">
+                <form method="POST" action="/predict">
+                    <div class="form-row">
+                      <div class="col">
+                        <label for="inputText">MDVP:Fo</label>
+                        <input type="text" class="form-control" placeholder="MDVP:Fo" name="MDVP_Fo">
+                      </div>
+                      <div class="col">
+                        <label for="inputText">MDVP:Fhi</label>
+                        <input type="text" class="form-control" placeholder="MDVP:Fhi" name="MDVP_Fhi">
+                      </div><div class="col">
+                        <label for="inputText">MDVP:Flo</label>
+                        <input type="text" class="form-control" placeholder="MDVP:Flo" name="MDVP_Flo">
+                      </div>
+                      <div class="col">
+                        <label for="inputText">MDVP_jitter_percent</label>
+                        <input type="text" class="form-control" placeholder="mdvp_jitter_percent" name="mdvp_jitter_percent">
+                      </div>
+                    </div> <br>
+                    <div class="form-row">
+                      <div class="col">
+                        <label for="inputText">MDVP_jitter_abs</label>
+                        <input type="text" class="form-control" placeholder="mdvp_jitter_abs" name="mdvp_jitter_abs">
+                      </div>
+                      <div class="col">
+                        <label for="inputText">MDVP_rap</label>
+                        <input type="text" class="form-control" placeholder="mdvp_rap" name="mdvp_rap">
+                      </div>
+                        <div class="col">
+                          <label for="inputText">MDVP_ppq</label>
+                          <input type="text" class="form-control" placeholder="mdvp_ppq" name="mdvp_ppq">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Jitterr_ddp</label>
+                          <input type="text" class="form-control" placeholder="jitter_ddp" name="jitter_ddp">
+                        </div>
+                      </div> <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputText">MDVP_shimmer</label>
+                          <input type="text" class="form-control" placeholder="mdvp_shimmer" name="mdvp_shimmer">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">MDVP_shimmer_db</label>
+                          <input type="text" class="form-control" placeholder="mdvp_shimmer_db" name="mdvp_shimmer_db">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Shimmer_apq3</label>
+                          <input type="text" class="form-control" placeholder="shimmer_apq3" name="shimmer_apq3">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Shimmer_apq5</label>
+                          <input type="text" class="form-control" placeholder="shimmer_apq5" name="shimmer_apq5">
+                        </div>
+                      </div> <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputText">MDVP_apq</label>
+                          <input type="text" class="form-control" placeholder="mdvp_apq" name="mdvp_apq">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Shimmer_dda</label>
+                          <input type="text" class="form-control" placeholder="shimmer_dda" name="shimmer_dda">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Nhr</label>
+                          <input type="text" class="form-control" placeholder="nhr" name="nhr">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">hnr</label>
+                          <input type="text" class="form-control" placeholder="hnr" name="hnr">
+                        </div>
+                      </div> <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputText">Rped</label>
+                          <input type="text" class="form-control" placeholder="rped" name="rped">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Dfa</label>
+                          <input type="text" class="form-control" placeholder="dfa" name="dfa">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Spread 1</label>
+                          <input type="text" class="form-control" placeholder="spread1" name="spread1">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Spread 2</label>
+                          <input type="text" class="form-control" placeholder="spread2" name="spread2">
+                        </div>
+                      </div> <br>
+                      <div class="form-row">
+                        
+                        <div class="col">
+                          <label for="inputText">Df</label>
+                          <input type="text" class="form-control" placeholder="df" name="df">
+                        </div>
+                        <div class="col">
+                          <label for="inputText">Ppe</label>
+                          <input type="text" class="form-control" placeholder="ppe" name="ppe">
+                        </div>
+                      </div> <br>
+                      <button type="submit" class="btn btn-outline-primary mb-lg-3">Submit</button>
+                  </form>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
